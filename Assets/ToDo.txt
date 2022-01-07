@@ -1,0 +1,13 @@
+Create lock on camera
+
+	-Get placeholder bodies
+	-Mount camera over shoulder
+	-Smooth look at
+
+
+
+Concepts:
+
+Focus
+
+Ring Rotation indicates relationship
