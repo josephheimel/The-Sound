@@ -1,13 +1,25 @@
 Create lock on camera
 
-	-Get placeholder bodies
+	-Make ps1 style model
 	-Mount camera over shoulder
-	-Smooth look at
+		*camera rests on circle around player
+		*camera always sits opposite the focus behind the player
 
+		--test to find good camera angles at different distances
+
+	-Smooth look at
+		*camera view follows mouse movement ***
+		*camera resting position follows focus lock
+
+
+Stamina build and management
+	- Correlates to volume (auditory/physical) and power
+
+
+
+Attacking and pre-moving
 
 
 Concepts:
 
-Focus
-
-Ring Rotation indicates relationship
+Mobility is key to combat, how much distance can you cover?

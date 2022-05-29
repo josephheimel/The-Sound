@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CenterOnClickedObject : MonoBehaviour
 {
     private GameObject target;
+
+    [SerializeField] private CinemachineFreeLook thirdPersonCamera;
 
     // Update is called once per frame
     void Update()
@@ -23,8 +26,7 @@ public class CenterOnClickedObject : MonoBehaviour
 
         //set transform of this object
         transform.SetPositionAndRotation(target.transform.position, target.transform.rotation);
-
         // - Maybe move to separate script
-        Camera.main.transform.LookAt(target.transform.position);
+        thirdPersonCamera.m_LookAt = target.transform;
     }
 }

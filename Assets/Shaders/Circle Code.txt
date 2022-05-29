@@ -1,0 +1,40 @@
+First Raytrace 
+
+
+
+
+    drawCircle(center, radius, color, ctx) {
+        
+        const twopi = Math.PI*2
+        let radians = twopi/this.num_curve_sections
+        let theta = 0
+
+        while(theta < twopi) {
+            let x0 = center.x + (radius * Math.cos(theta))
+            let y0 = center.y + (radius * Math.sin(theta))
+            let x1 = center.x + (radius * Math.cos(theta + radians))
+            let y1 = center.y + (radius * Math.sin(theta + radians))
+
+
+            // Draw Points
+            if(this.show_points){
+                
+                // Draw Center
+                this.drawLine(center, {x:center.x+1,y:center.y+1}, [0,0,0,255], ctx)
+                // Draw Verticies
+                this.drawLine({x:x0,y:y0}, {x:x0+1,y:y0+1}, [0,0,0,255], ctx)
+                this.drawLine({x:x0,y:y0}, {x:x0+1,y:y0+1}, [0,0,0,255], ctx)
+                this.drawLine({x:x0,y:y0}, {x:x0+1,y:y0+1}, [0,0,0,255], ctx)
+                this.drawLine({x:x0,y:y0}, {x:x0+1,y:y0+1}, [0,0,0,255], ctx)
+            }
+
+
+            this.drawLine({x:x0,y:y0}, {x:x1,y:y1}, color, ctx)
+
+            // Shift Color
+            color = this.shiftColor(color)
+
+            // Increment Theta
+            theta = radians + theta
+        }
+    }
