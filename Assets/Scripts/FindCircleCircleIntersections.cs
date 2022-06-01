@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class FindCircleCircleIntersections : MonoBehaviour
+public class FindCircleCircleIntersections
 {
         // Find the points where the two circles intersect.
     public int IntersectionFinder(Vector2 center0, float radius0, Vector2 center1, float radius1, out Vector2 intersection0, out Vector2 intersection1)
